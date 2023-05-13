@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliya Pitkis - Nail Academy</title>     <!--  -->
+    <link rel="shortcut icon" type="x-icon" href="pics/logo.jpg" align="center" ;>
+    <link type="text/CSS" href="mystyle.css" rel="Stylesheet" />
+    <title>Form 3</title>
+    <style type="text/CSS">
+        form {
+            background-color: #ead4ca;
+            width: 80%;
+            padding: 10px;
+            direction: rtl;
+            font-family: Arial;
+            font-size: 27px;
+            margin: 0 auto;
+            color: black;
+        }
+        a {
+            transition: all 0.30s linear 0s;
+        }
+    </style>
+    <script>
+        function checkForm() {
+            var msg = "";
+            var illegalchars = /[^a-zA-Zא-ת\' ']/;
+            var illegalnums = /[^0-9\-]/;
+            var mailfilter = /^([a-zA-Z0-9\.\-\_])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+
+            //***********************//
+            // First name validation //
+            //***********************//
+            var fName = document.forms["contactForm"]["f_name"].value;
+            if (fName == "") {
+                alert("First Name must be entered !!");
+                return false;
+            }
+            if (fName.length < 2) {
+                alert("First Name too short !!");
+                return false;
+            }
+            if (illegalchars.test(fName)) {
+                alert("First Name is illegal !!");
+                return false;
+            }
+            //***********************//
+            // Last name validation //
+            //***********************//
+            var lName = document.forms["contactForm"]["l_name"].value;
+            if (lName == "") {
+                alert("Last Name must be entered !!");
+                return false;
+            }
+            if (lName.length < 2) {
+                alert("Last Name too short !!");
+                return false;
+            }
+            if (illegalchars.test(lName)) {
+                alert("Last Name is illegal !!");
+                return false;
+            }
+            //***********************//
+            // Phone      validation //
+            //***********************//
+            var phone = document.forms["contactForm"]["phone"].value;
+            if (phone == "") {
+                alert("Phone must be entered !!");
+                return false;
+            }
+            if (illegalnums.test(phone)) {
+                alert("Phone number is illegal !!");
+                return false;
+            }
+            //***********************//
+            // E-mail     validation //
+            //***********************//
+            var email = document.forms["contactForm"]["email"].value;
+            if (email == "") {
+                alert("E-mail must be entered !!");
+                return false;
+            }
+            if (!mailfilter.test(email)) {
+                alert("E-mail address is illegal !!");
+                return false;
+            }
+            return true; //function return ok
+        }//checkForm()
+
+    </script>
+</head>
+<body align="center" ;>
+    <table width="100%" align="center" ; style="background-color: #0A0A0C">
+        <tr>
+            <td class="img" ; align="left">
+                <a href="https://wa.me/+972549942777" title="My WhatsApp" target="_blank">
+                    <img src="pics/whatsapp.png" />
+                </a><br />
+                <a href="https://www.facebook.com/eliya.pit/" title="My Facebook" target="_blank">
+                    <img src="pics/facebook.png" />
+                </a><br />
+                <a href="https://www.instagram.com/eliyapit/" title="My Instagram" target="_blank">
+                    <img src="pics/insta.png" />
+                </a>
+            </td>
+            <td>
+                <div align="center">
+                    <img src="pics/magazine.jpg" style="width: 400px;  height: 150px;" />
+                    <img src="pics/logo.jpg" style="width: 150px;  height: 150px;">
+                </div>
+            </td>
+            <td style="width: 9%" ;></td>
+        </tr>
+    </table>
+
+
+    <table class="table" ; style="width: 38%; background-color: #ead4ca" align="center">
+        <style type="text/CSS">
+            a:hover {
+                font-style: oblique;
+                font-size: 30px;
+                text-decoration-color: #D41C58;
+                transition: all 0.30s linear 0s;
+            }
+        </style>
+        <tr id="linki:hover">
+            <td style="width: 25%" ;><a href="Home.html" title="עמוד הבית">עמוד הבית</a></td>
+            <td style="width: 25%" ;><a href="Curses.html" title="קורסים">קורסים</a></td>
+            <td style="width: 25%" ;><a href="Galery.html" title="גלריה">גלריה</a></td>
+            <td style="width: 25%" ;><a href="ContactUs.html" title="הרשמה">הרשמה</a></td>
+        </tr>
+
+    </table>
+
+
+    <br /><br />
+
+    <form name="contactForm" action="ThankYou.html" onsubmit="return checkForm()">
+        <style type="text/CSS">
+            table {
+                background-color: #D0B8A8;
+                width: 95%;
+                height: 50px;
+                text-align: center;
+            }
+        </style>
+        <fieldset style="background-color: #D0B8A8">
+            <table style="width: 100%; border-block-style: double">
+                <tr>
+                    <td>שם פרטי: </td>
+                    <td align="right">
+                        <input type="text" name="f_name" maxlength="15" />
+                    </td>
+                    <td style="width: 20%" ; align="left">
+                        מספר טלפון:
+                    </td>
+                    <td style="width: 10%" ; align="left">
+                        <input type="text" name="phone" maxlength="7" />
+                    </td>
+                    <td style="width: 30%" ; align="right">
+                        <select name="kidomet">
+                            <option value="054">054</option>
+                            <option value="052">052</option>
+                            <option value="054">054</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="077">077</option>
+                            <option value="073">073</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>שם משפחה: </td>
+                    <td align="right">
+                        <input type="text" name="l_name" maxlength="15" />
+                    </td>
+                    <td style="width: 20%" ; align="left">דואר אלקטרוני: </td>
+                    <td style="width: 10%" ; align="left">
+                        <input type="text" name="email" maxlength="30" />
+                    </td>
+                </tr>
+            </table>
+            <td style="width: 40%; " ; align="left">
+                <table style="width: 100%; border-block-style: double; ">
+                    <tr>
+                        <td style="width: 15%" align="right">
+                            מתעניינת בקורסים:
+                        </td>
+                        <td align="right">
+                            <div>
+                                <input type="checkbox" id="checkboxBNIA" onchange="displayTextBNIA()">
+                                <label for="checkbox">בניית ציפורניים</label>
+                                <span id="textBNIA"></span>
+                            </div>
+                            <!--    בלחיצה מופיעה מחיר   -->
+                            <script>
+                                function displayTextBNIA() {
+                                    var checkbox = document.getElementById("checkboxBNIA");
+                                    var text = document.getElementById("textBNIA");
+                                    if (checkbox.checked === true) {
+                                        text.innerHTML = " (מחיר לפני הנחה 6000שח)";
+                                    } else {
+                                        text.innerHTML = "";
+                                    }
+                                }
+                            </script>
+
+                            <div>
+                                <input type="checkbox" id="checkboxGEL" onchange="displayTextGEL()">
+                                <label for="checkbox">לק ג'ל</label>
+                                <span id="textGEL"></span>
+                            </div>
+                            <!--    בלחיצה מופיעה מחיר   -->
+                            <script>
+                                function displayTextGEL() {
+                                    var checkbox = document.getElementById("checkboxGEL");
+                                    var text = document.getElementById("textGEL");
+                                    if (checkbox.checked === true) {
+                                        text.innerHTML = " (מחיר לפני הנחה 2400שח)";
+                                    } else {
+                                        text.innerHTML = "";
+                                    }
+                                }
+                            </script>
+
+                            <div>
+                                <input type="checkbox" id="checkboxT" onchange="displayTextT()">
+                                <label for="checkbox">ציורים וקישוטים</label>
+                                <span id="textT"></span>
+                            </div>
+                            <!--    בלחיצה מופיעה מחיר   -->
+                            <script>
+                                function displayTextT() {
+                                    var checkbox = document.getElementById("checkboxT");
+                                    var text = document.getElementById("textT");
+                                    if (checkbox.checked === true) {
+                                        text.innerHTML = " (מחיר לפני הנחה 1400שח)";
+                                    } else {
+                                        text.innerHTML = "";
+                                    }
+                                }
+                            </script>
+
+                            <div>
+                                <input type="checkbox" id="checkboxHISH" onchange="displayTextHISH()">
+                                <label for="checkbox">השתלמות בכל נושא</label>
+                                <span id="textHISH"></span>
+                            </div>
+                            <!--    בלחיצה מופיעה מחיר   -->
+                            <script>
+                                function displayTextHISH() {
+                                    var checkbox = document.getElementById("checkboxHISH");
+                                    var text = document.getElementById("textHISH");
+                                    if (checkbox.checked === true) {
+                                        text.innerHTML = " (מחיר ליום לימודים 700שח)";
+                                    } else {
+                                        text.innerHTML = "";
+                                    }
+                                }
+                            </script>
+
+
+                        </td>
+
+                        <td style="width: 30%" ;>
+                            <table style="border: none">
+                                <tr>
+                                    <td align="left">
+                                        נסיון בתחום: &nbsp;
+                                    </td>
+                                    <td align="right">
+                                        <input type="radio" name="nisaion" value="noNicaion" checked="checked" />ללא נסיון
+                                        <br>
+                                        <input type="radio" name="nisaion" value="1year" />שנה נסיון
+                                        <br>
+                                        <input type="radio" name="nisaion" value="3less" />עד 3 שנים נסיון
+                                        <br>
+                                        <input type="radio" name="nisaion" value="3more" />מעל 3 שנים נסיון
+                                        <br>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 20%" ; align="center">
+                            עדיפות:
+                            <select name="ADIFUT">
+                                <option value="BOKER">קורס בוקר</option>
+                                <option value="EREV">קורס ערב</option></select>
+                        </td>
+                    </tr>
+            </td>
+            <table style="width: 100%; border-block-style: double;">
+                <tr>
+                    <td style="width: 20%" ; align="left">
+                        <label for="message">
+                            תוכן הודעה:
+                        </label>
+                    </td>
+                    <td style="width: 35%" ; align="right">
+                        <textarea name="message" id="message" cols="60" rows="4"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <table colspan="3" ; style="width: 100%; border-block-style: double;">
+                <tr>
+                    <td align="center" ; style="width: 100%">
+                        <style type="text/CSS">
+                            .button {
+                                background-color: #f22b8e; /* fuksia */
+                                border: none;
+                                color: #ead4ca;
+                                padding: 15px 32px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                cursor: pointer;
+                            }
+                            .button1 {
+                                background-color: #ead4ca;
+                                color: black;
+                                border: 2px solid #f22b8e;
+                            }
+                        </style>
+                        <button class="button button1" ; value="Send" />שלח
+                    </td>
+                    <td style="width: 20%" ; align="left"></td>
+                    <td style="width: 35%" ; align="right"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
+

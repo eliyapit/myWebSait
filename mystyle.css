@@ -1,0 +1,50 @@
+body {
+    background-color: #ead4ca;
+    direction: rtl;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+table {
+    background-color: #0A0A0C;
+    width: 95%;
+    height: 50px;
+    text-align: center;
+}
+a {
+    color: #EA047E;
+    font-family: Arial-bol;
+    font-size: 24px;
+    text-shadow: 3px 1px #bda296;
+    text-decoration: none;
+    transition: all 0.30s linear 0s;
+
+}
+h2 {
+    color: #EA047E;
+    direction: rtl;
+    font-family: Arial;
+    font-size: 27px;
+    text-shadow: 4px 0.5px #bda296;
+}
+p {
+    color: black;
+    direction: rtl ;
+    font-family: Arial;
+    font-size: 17px
+}
+span {
+    color: black;
+    direction: rtl;
+    font-family: Arial;
+    font-size: 17px;
+}
+#kesher1 {
+    width: 80%;
+    margin: auto;
+    clear: both;
+}
+
+
